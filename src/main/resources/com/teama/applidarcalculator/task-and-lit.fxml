@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="604.0" prefWidth="853.0"
+            xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teama.applidarcalculator.Controller.TaskAndLitController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="579.0" prefWidth="828.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="828.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="153.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onTitleButton" text="Титульный лист" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="185.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onTaskAndLitButton" prefHeight="24.0" prefWidth="170.0" text="Задачи и литература" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="116.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onParameterButton" prefHeight="24.0" prefWidth="102.0" text="Параметры" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="80.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onCalLidarButton" text="Расчет" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="480.0" prefWidth="828.0">
+               <children>
+                  <VBox prefHeight="474.0" prefWidth="1045.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="88.0" prefWidth="871.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="828.0">
+                                       <children>
+                                          <Label text="Цель работы">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="65.0" prefWidth="828.0">
+                                       <children>
+                                          <VBox prefHeight="62.0" prefWidth="828.0">
+                                             <children>
+                                                <Label text="Целью программы является вычисление мощности, возвращаемой приемнику для заданной мощности " />
+                                                <Label text="передаваемого лазера, оптических свойств среды, через которую проходит лидарный луч, и свойств цели." />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="167.0" prefWidth="828.0">
+                           <children>
+                              <VBox prefHeight="109.0" prefWidth="828.0">
+                                 <children>
+                                    <HBox prefHeight="30.0" prefWidth="828.0">
+                                       <children>
+                                          <Label text="Однако существует множество версий лидарных уравнений, каждая из которых адаптирована" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="28.0" prefWidth="828.0">
+                                       <children>
+                                          <Label text="к конкретному применению." />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="27.0" prefWidth="828.0">
+                                       <children>
+                                          <Label text="Уравнение лидара, разработанное здесь, относится к обнаружению рассеивающего слоя или " />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="цели в воде, видимой лазером, визуализирующим океан с бортовой платформы." />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="84.0" prefWidth="828.0">
+                           <children>
+                              <Label text="Литература">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="131.0" prefWidth="828.0">
+                           <children>
+                              <VBox prefHeight="239.0" prefWidth="828.0">
+                                 <children>
+                                    <Label text="1.Введение в лидар, в оптическом дистанционном зондировании атмосферы с разрешением в диапазоне " />
+                                    <Label text="   лидара, Wandinger, U. (2005)" />
+                                    <Label text="2.Фотограмметрическая инженерия и дистанционное зондирование, Markelin, L., Honkavaara, E., Peltoniemi, J.(2008)" />
+                                    <Label text="3.Лазерное дистанционное зондирование: Основы и приложения, Measures, R. M. (1992)" />
+                                    <Label text="4.Лазерное сканирование для измерения береговой линии и мощности, Ackermann, F. (1992)" />
+                                    <Label text="5.Решение проблемы точностив воздушной лидарной батиметрии, Guenther, G. C., Cunningham," />
+                                    <Label text="  A. G., Laroque, P. E., Reid, D. J. (2000)" />
+                                 </children>
+                              </VBox>
+                           </children></HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="61.0" prefWidth="828.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onPrevPage" text="Продложить" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
