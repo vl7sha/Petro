@@ -3,8 +3,14 @@ package com.teama.applidarcalculator.Controller;
 import com.teama.applidarcalculator.View;
 import com.teama.applidarcalculator.ViewSwitcher;
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
-public class TaskAndLitController {
+public class TaskAndTeorController {
+
+    @FXML
+    private ImageView imageTeor;
+
 
     //Кнопка переходит на сцену с титульным листом
     @FXML
@@ -14,8 +20,8 @@ public class TaskAndLitController {
 
     //Кнопки переходит на сцену с задачей и литературой
     @FXML
-    protected void onTaskAndLitButton(){
-        ViewSwitcher.switchTo(View.TASKANDLIT);
+    protected void onTaskAndTeorButton(){
+        ViewSwitcher.switchTo(View.TASKANDTEOR);
     }
 
     //Кнопка переходит на сцену с описаниями параментра
@@ -30,9 +36,26 @@ public class TaskAndLitController {
         ViewSwitcher.switchTo(View.CALLIDAR);
     }
 
-    //Кнопка переходит на следующую сцену
+    @FXML
+    protected void onLiterButton(){
+        ViewSwitcher.switchTo(View.LITER);
+    }
+
     @FXML
     protected void onPrevPage(){
         ViewSwitcher.switchTo(View.PARAMETER);
+    }
+
+
+    public void onImageTeor1() {
+        imageTeor.setImage(new Image("com/teama/applidarcalculator/Image/ImageTeor1.png"));
+    }
+
+    public void onImageTeor2() {
+        imageTeor.setImage(new Image("com/teama/applidarcalculator/Image/ImageTeor2.png"));
+    }
+
+    public void onImageTeor3() {
+        imageTeor.setImage(new Image("com/teama/applidarcalculator/Image/ImageTeor3.png"));
     }
 }

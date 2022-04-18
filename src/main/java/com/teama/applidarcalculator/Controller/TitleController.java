@@ -14,8 +14,8 @@ public class TitleController {
 
     //Кнопки переходит на сцену с задачей и литературой
     @FXML
-    protected void onTaskAndLitButton(){
-        ViewSwitcher.switchTo(View.TASKANDLIT);
+    protected void onTaskAndTeorButton(){
+        ViewSwitcher.switchTo(View.TASKANDTEOR);
     }
 
     //Кнопка переходит на сцену с описаниями параментра
@@ -30,9 +30,13 @@ public class TitleController {
         ViewSwitcher.switchTo(View.CALLIDAR);
     }
 
-    //Кнопка переходит на следующую сцену
+    @FXML
+    protected void onLiterButton(){
+        ViewSwitcher.switchTo(View.LITER);
+    }
+
     @FXML
     protected void onPrevPage(){
-        ViewSwitcher.switchTo(View.TASKANDLIT);
+        ViewSwitcher.switchTo(View.TASKANDTEOR);
     }
 }

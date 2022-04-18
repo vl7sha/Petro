@@ -4,12 +4,8 @@ import com.teama.applidarcalculator.Entity.CalculatorLidar;
 import com.teama.applidarcalculator.View;
 import com.teama.applidarcalculator.ViewSwitcher;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 public class CalLidarController {
 
@@ -25,11 +21,6 @@ public class CalLidarController {
     public TextField depthAveragedAttenuationCoefficientForUpwellingIrradianceE;
     public Label resultCalLidar;
 
-    @FXML
-    protected AnchorPane anchorPane;
-
-    Stage stage;
-
     //Кнопка переходит на сцену с титульным листом
     @FXML
     protected void onTitleButton(){
@@ -38,8 +29,8 @@ public class CalLidarController {
 
     //Кнопки переходит на сцену с задачей и литературой
     @FXML
-    protected void onTaskAndLitButton(){
-        ViewSwitcher.switchTo(View.TASKANDLIT);
+    protected void onTaskAndTeorButton(){
+        ViewSwitcher.switchTo(View.TASKANDTEOR);
     }
 
     //Кнопка переходит на сцену с описаниями параментра
@@ -52,6 +43,11 @@ public class CalLidarController {
     @FXML
     protected void onCalLidarButton(){
         ViewSwitcher.switchTo(View.CALLIDAR);
+    }
+
+    @FXML
+    protected void onLiterButton(){
+        ViewSwitcher.switchTo(View.LITER);
     }
 
     //Кнопка расчитывает лидарное уравнеи и выводит его в
@@ -75,34 +71,14 @@ public class CalLidarController {
 
             resultCalLidar.setText(String.valueOf(calculatorLidar.lad()));
         } catch (NumberFormatException e){
-            waterBeamSpreadFunction.setStyle("-fx-background-color: red");
             System.out.println(e);
         } catch (Exception e){
             System.out.println(e);
         }
     }
 
-    //Кнопка закрытия приложения, где есть подверждения об закрытие
     @FXML
-    public void onCloseButton(){
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Выход");
-        alert.setHeaderText("Вы выходите!!");
-        alert.setContentText("Вы запомнили число?");
-
-        if (alert.showAndWait().get() == ButtonType.OK){
-            stage = (Stage) anchorPane.getScene().getWindow();
-            System.out.println("Закрытие прошло успешно");
-            stage.close();
-        }
-    }
-
-    private boolean valid(String value){
-        try {
-            double b =Double.parseDouble(value);
-            return  true;
-        } catch (NumberFormatException e){
-            return true;
-        }
+    protected void onPrevPage(){
+        ViewSwitcher.switchTo(View.LITER);
     }
 }

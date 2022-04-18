@@ -16,12 +16,12 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="49.0" prefWidth="153.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#onTitleButton" text="Титульный лист" />
+                        <Button mnemonicParsing="false" onAction="#onTitleButton" prefHeight="24.0" prefWidth="135.0" text="Титульный лист" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="49.0" prefWidth="185.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#onTaskAndLitButton" prefHeight="24.0" prefWidth="170.0" text="Задачи и литература" />
+                        <Button mnemonicParsing="false" onAction="#onTaskAndTeorButton" prefHeight="24.0" prefWidth="170.0" text="Задачи и литература" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="49.0" prefWidth="116.0">
@@ -32,6 +32,11 @@
                   <HBox alignment="CENTER" prefHeight="28.0" prefWidth="80.0">
                      <children>
                         <Button mnemonicParsing="false" onAction="#onCalLidarButton" text="Расчет" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="120.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onLiterButton" text="Литература" />
                      </children>
                   </HBox>
                </children>
@@ -126,7 +131,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="61.0" prefWidth="828.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#onPrevPage" text="Продложить" />
+                  <Button mnemonicParsing="false" onAction="#onPrevPage" text="Продолжить" />
                </children>
             </HBox>
          </children>
